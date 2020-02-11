@@ -1285,12 +1285,12 @@
 
     foreach($array_paises as $p){
         wp_insert_term( 
-            $p->nome_pais,
-            'pais', 
+            $p->nome_pais, //nome da categoria
+            'pais', //taxonomia
             array(
                 'description' => '',
                 'slug' => $p->sigla,
-                'parent' => 0,
+                'parent' => 0,//categoria pai
             ) 
         );
     }
